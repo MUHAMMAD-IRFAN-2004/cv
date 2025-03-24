@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <div class="cv-wrapper">
+        <form>
+            
+    
+            <!-- Personal Information Section -->
+            <div class="header">
+                <h1>Curriculum vitae</h1>
+                <p>Complete the form to create your CV</p>
+            </div>
+             <!-- Profile Image Section -->
+             <div class="profile-image-container">
+                <img src="image.jpg" width="300" height="200" alt="Example Image">
+                <input type="file" id="photo-input" class="hidden" accept="image/*">
+                <p>Click to upload profile photo</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-user"></i>
+                    <h3>Personal Information</h3>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience Section -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="experience-item">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Job Title</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label>Company</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Start Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-group">
+                            <label>End Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Responsibilities</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                </div>
+                <div class="education-item">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Degree</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label>Institution</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Graduation Year</label>
+                            <input type="number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-tools"></i>
+                    <h3>Skills</h3>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <input type="checkbox">
+                        <span>Project Management</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox">
+                        <span>Team Leadership</span>
+                    </div>
+                    <div class="skill-item">
+                        <input type="checkbox">
+                        <span>Data Analysis</span>
+                    </div>
+                    <!-- Add more skills as needed -->
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Projects</h3>
+                </div>
+                <div class="input-group">
+                    <label>Project Details</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Professional CV Form</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+        
+                body {
+                    background: #f0f2f5;
+                    padding: 2rem;
+                }
+        
+                .cv-wrapper {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 2.5rem;
+                    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                    border-radius: 8px;
+                }
+        
+                .header {
+                    text-align: center;
+                    margin-bottom: 2rem;
+                    padding-bottom: 1.5rem;
+                    border-bottom: 2px solid #2c3e50;
+                }
+        
+                .header h1 {
+                    color: #2c3e50;
+                    font-size: 2.2rem;
+                    margin-bottom: 0.5rem;
+                }
+        
+                .section {
+                    margin-bottom: 2rem;
+                }
+        
+                .section-title {
+                    color: #2c3e50;
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 2px solid #3498db;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+        
+                .form-row {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+        
+                .input-group {
+                    margin-bottom: 1.2rem;
+                }
+        
+                label {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: #34495e;
+                    font-weight: 600;
+                }
+        
+                input, textarea, select {
+                    width: 100%;
+                    padding: 0.8rem;
+                    border: 1px solid #bdc3c7;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                    transition: border-color 0.3s ease;
+                }
+        
+                input:focus, textarea:focus, select:focus {
+                    outline: none;
+                    border-color: #3498db;
+                    box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+                }
+        
+                textarea {
+                    resize: vertical;
+                    min-height: 100px;
+                }
+        
+                .experience-item, .education-item {
+                    background: #f8f9fa;
+                    padding: 1rem;
+                    border-radius: 4px;
+                    margin-bottom: 1rem;
+                }
+        
+                .skill-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                }
+        
+                .skill-item {
+                    background: #e9ecef;
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+        
+                .action-buttons {
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+        
+                .btn {
+                    padding: 0.8rem 2rem;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    transition: transform 0.2s ease;
+                }
+        
+                .btn-primary {
+                    background: #3498db;
+                    color: white;
+                }
+        
+                .btn-primary:hover {
+                    background: #2980b9;
+                    transform: translateY(-1px);
+                }
+        
+                @media (max-width: 768px) {
+                    body {
+                        padding: 1rem;
+                    }
+                    
+                    .cv-wrapper {
+                        padding: 1.5rem;
+                    }
+                }
+            </style>
+        <div class="cv-wrapper">
+            <form>
+               
+               
+                    <div class="social-links">
+                        <div class="input-group">
+                            <label>LinkedIn</label>
+                            <div class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <input type="url" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>GitHub</label>
+                            <div class="social-link">
+                                <i class="fab fa-github"></i>
+                                <input type="url" placeholder="https://github.com/yourusername">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>Portfolio</label>
+                            <div class="social-link">
+                                <i class="fas fa-globe"></i>
+                                <input type="url" placeholder="https://yourportfolio.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- New Languages Section -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-language"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="language-item">
+                        <div class="input-group">
+                            <label>Language</label>
+                            <input type="text" placeholder="English">
+                        </div>
+                        <div class="input-group">
+                            <label>Proficiency</label>
+                            <select>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                                <option value="native">Native</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-more">+ Add Another Language</div>
+                </div>
+        
+                <!-- Previous sections remain the same -->
+        
+                <!-- Updated Action Buttons with Links -->
+                <div class="action-buttons">
+                    <button type="submit" class="btn btn-primary">Generate CV</button>
+                    <a href="#download" class="btn btn-primary">Download PDF</a>
+                    <a href="#preview" class="btn">Preview</a>
+                </div>
+                <script>
+                    // Simple image preview functionality
+                    document.getElementById('photo-input').addEventListener('change', function(e) {
+                        const reader = new FileReader();
+                        reader.onload = function() {
+                            document.querySelector('.profile-image').src = reader.result;
+                        }
+                        reader.readAsDataURL(e.target.files[0]);
+                    });
+                
+                    // Add more languages functionality
+                    document.querySelector('.add-more').addEventListener('click', function() {
+                        const newLanguage = document.querySelector('.language-item').cloneNode(true);
+                        newLanguage.querySelectorAll('input').forEach(input => input.value = '');
+                        document.querySelector('.languages-section').appendChild(newLanguage);
+                    });
+                </script>
+            </form>
+        </div>
+
+           
+        </form>
+    </div>
+</body>
+</html>
